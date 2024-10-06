@@ -8,9 +8,26 @@
 <body>
     <script>
         function sanitize(n) {
+            // funzione che leva eventuali spazi nell'input dato dall'utente.
             return n.trim()
         }
 
+        function generateRandomIntiger(min, max) {
+            // funzione che crea il numero casuale.
+            let casualNumber = math.random()
+            casualNumber = casualNumber * 100
+            casualNumber = parseInt(casualNumber)
+
+            return casualNumber
+        }
+
+        let randomNumber
+        randomNumber = generateRandomIntiger(1, 100)
+        let number = prompt("Inserisci  un numero: ") 
+        while (number === null) {
+            number = prompt("Hai sbagliato! Inserisci nuovamente un numero: ")
+        }
+        number = sanitize(number)
     </script>
 </body>
 </html>
