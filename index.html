@@ -27,6 +27,10 @@
         while (number === null) {
             number = prompt("Hai sbagliato! Inserisci nuovamente un numero: ")
         }
+        
+        while (isNaN(number)) {
+            number = prompt("Hai sbagliato! Inserisci un numero: ")
+        }
         number = sanitize(number)
     </script>
 </body>
