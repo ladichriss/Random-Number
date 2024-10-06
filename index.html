@@ -14,7 +14,7 @@
 
         function generateRandomIntiger(min, max) {
             // funzione che crea il numero casuale.
-            let casualNumber = Math.random()
+            casualNumber = Math.random()
             casualNumber = casualNumber * 100
             casualNumber = parseInt(casualNumber)
 
@@ -23,16 +23,27 @@
 
         let randomNumber
         let tentativi
-        randomNumber = generateRandomIntiger(1, 100)
-        let number = prompt("Inserisci  un numero: ") 
-        while (number === null) {
-            number = prompt("Hai sbagliato! Inserisci nuovamente un numero: ")
+        let casualNumber
+        randomNumber = generateRandomIntiger(1, 100) 
+
+        while (tentativi <= 0) {
+            if (number === null) {
+                if (isNaN(number)) {
+                    while ("Inserisci un numero: ") {
+                        number = sanitize(number)
+                        if (number > casualNumber) {
+                            console.log("Il numero da te inserito è troppo grande")
+                            tentativi = tentativi - 1
+                        } else if (number === casualNumber) {
+                            console.log("Hai indovinato il numero! COMPLIMENTI!")
+                            tentativi === 0
+                        } else if (number < casualNumber) {
+                            console.log("Il numero da te inserito è troppo piccolo")
+                        }
+                    }
+                }
+            }
         }
-        
-        while (isNaN(number)) {
-            number = prompt("Hai sbagliato! Inserisci un numero: ")
-        }
-        number = sanitize(number)
     </script>
 </body>
 </html>
