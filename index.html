@@ -6,10 +6,19 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>Guess the Number</h1>
+    ho generato un numero casuale, prova ad indovinarlo
+    <br>
+    hai ancora 5 tentativi
+    
+    <input type="number" name="user_guess" value="0"/>
+    <button id="button" type="submit">Invia</button>
+
     <script>
         let r
         let tentativi 
         let casualNumber
+        let number
         r = generateRandomInteger(1, 100)
         tentativi = 5
 
@@ -22,13 +31,18 @@
             return casualNumber
         }
 
-        while (tentativi > 0) {
-            let number = prompt("Inserisci un numero: (da 1 a 100) ")
-            while (number === null) {
-                number = prompt("Hai sbagliato! Inserisci un numero: (da 1 a 100)")
-            }
-
+        inputNumber = document.querySelector("[name=user_guess]")
+        let button = document.querySelector("#button")
+        button.addEventListener("click", function(event) {
+            number = inputNumber.
             number = parseInt(number) // trasformo il numero in intero
+            console.log(number)
+        })
+
+        while (tentativi > 0) {
+            while (number === null) {
+                console.log("Hai sbagliato! Inserisci un numero: (da 1 a 100)")
+            }
 
             if (number > casualNumber) {
                 console.log("Il numero da te inserito è troppo grande")
