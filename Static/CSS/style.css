@@ -31,7 +31,17 @@ body {
     width: 350px;
     height: 60px;
     border: none;
-    background-color: color;
+    background-color: white;
+}
+
+#tipoNumero {
+    padding-left: 55px;
+    padding-top: 18px;
+}
+
+#num_tentativi {
+    padding-left: 55px;
+    padding-bottom: 145px;
 }
 
 #button {
@@ -39,6 +49,7 @@ body {
     height: 60px;
     border: none;
     background-color: #3AE3A8;
+    font-weight: bold;
 }
 
 #paragraph {

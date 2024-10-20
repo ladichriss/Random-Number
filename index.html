@@ -33,12 +33,12 @@
         <form action="" method="get">
             <input id="userGuess" type="number" name="user_guess" value="0"/>
             <br>
-            <input type="button" value="Prova ad indovinare" id="button">
+            <input type="button" value="INDOVINA" id="button">
         </form>         
-
-        <div id="risultati"></div>
-        <div id="num_tentativi"></div>
-    </div>
+        
+        <div id="tipoNumero"> </div>
+        <div id="num_tentativi">Hai ancora <strong>5</strong> tentativi</div>
+</div>
 
     <script>
         let r
@@ -71,14 +71,17 @@
                 console.log("Il numero da te inserito è troppo grande")
                 document.querySelector("#num_tentativi").innerHTML = "Hai ancora " + tentativi + " rimanenti"
                 tentativi = tentativi - 1
+                document.querySelector("#tipoNumero").innerHTML = "Il numero è troppo grande!"
                 } else if (number === casualNumber) {
                     console.log("Hai indovinato il numero! COMPLIMENTI!")
                     tentativi = 0
+                    document.querySelector("#tipoNumero").innerHTML = "Hai indovinato il numero! COMPLIMENTI!"
                     document.querySelector("#num_tentativi").innerHTML = "Hai ancora " + tentativi + " rimanenti"
 
                 } else if (number < casualNumber) {
                     console.log("Il numero da te inserito è troppo piccolo")
                     tentativi = tentativi - 1
+                    document.querySelector("#tipoNumero").innerHTML = "Il numero è troppo piccolo!"
                     document.querySelector("#num_tentativi").innerHTML = "Hai ancora " + tentativi + " rimanenti"
                 }
             }
