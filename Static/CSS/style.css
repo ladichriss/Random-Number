@@ -9,9 +9,41 @@ body {
     font-weight: bold;
     font-size: 50px;
     text-align: center;
+    margin-top: 144px;
 }
 
 .rules_list {
     font-family: Inter;
     font-size: 16px;
+    padding-left: 439px;
+    padding-right:  453px;
+    padding-top: 48px;
+    padding-bottom: 80px;
+    list-style-position: inside;
+}
+
+.formInputUser {
+    padding-left: 538px;
+}
+
+#userGuess {
+    margin-bottom: 18px;
+    width: 350px;
+    height: 60px;
+    border: none;
+    background-color: color;
+}
+
+#button {
+    width: 350px;
+    height: 60px;
+    border: none;
+    background-color: #3AE3A8;
+}
+
+#paragraph {
+    font-family: Inter;
+    font-size: 16px;
+    margin: 0px;
+    
 }
