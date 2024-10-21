@@ -2,28 +2,28 @@
 
 body {
     background-color: #CCFFC5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .title {
     font-family: Inter;
     font-weight: bold;
     font-size: 50px;
-    text-align: center;
     margin-top: 144px;
 }
 
 .rules_list {
     font-family: Inter;
     font-size: 16px;
-    padding-left: 439px;
-    padding-right:  453px;
-    padding-top: 48px;
-    padding-bottom: 80px;
     list-style-position: inside;
 }
 
-.formInputUser {
-    padding-left: 538px;
+#formInputUser {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #userGuess {
@@ -32,16 +32,6 @@ body {
     height: 60px;
     border: none;
     background-color: white;
-}
-
-#tipoNumero {
-    padding-left: 55px;
-    padding-top: 18px;
-}
-
-#num_tentativi {
-    padding-left: 55px;
-    padding-bottom: 145px;
 }
 
 #button {
@@ -56,5 +46,4 @@ body {
     font-family: Inter;
     font-size: 16px;
     margin: 0px;
-    
 }
