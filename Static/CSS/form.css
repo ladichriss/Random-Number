@@ -1,0 +1,35 @@
+
+.formInputUser {
+    display: grid;
+    justify-content: center;
+    align-items: center;;
+}
+
+.tentativi {
+    margin-top: 18px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+#userGuess {
+    margin-bottom: 18px;
+    width: 350px;
+    height: 60px;
+    border: none;
+    background-color: white;
+}
+
+#button {
+    width: 350px;
+    height: 60px;
+    border: none;
+    background-color: #3AE3A8;
+    font-weight: bold;
+}
+
+#paragraph {
+    font-family: Inter;
+    font-size: 16px;
+    margin-top: 80px;
+}
