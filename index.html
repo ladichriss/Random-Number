@@ -35,10 +35,12 @@
                 <br>
                 <input type="button" value="INDOVINA" id="button">
             </form>         
-            
+        </div>
+
+        <div class="tentativi">
             <div id="tipoNumero"> </div>
-            <div id="num_tentativi">Hai ancora <strong>5</strong> tentativi</div>
-    </div>
+            <div id="num_tentativi">Hai ancora <span class="numBold">5</span> tentativi</div>
+        </div>
 </div>
 
     <script>
@@ -70,20 +72,20 @@
             } else {
                 if (number > casualNumber) {
                 console.log("Il numero da te inserito è troppo grande")
-                document.querySelector("#num_tentativi").innerHTML = "Hai ancora " + tentativi + " rimanenti"
+                document.querySelector(".numBold").innerHTML = tentativi
                 tentativi = tentativi - 1
                 document.querySelector("#tipoNumero").innerHTML = "Il numero è troppo grande!"
                 } else if (number === casualNumber) {
                     console.log("Hai indovinato il numero! COMPLIMENTI!")
                     tentativi = 0
                     document.querySelector("#tipoNumero").innerHTML = "Hai indovinato il numero! COMPLIMENTI!"
-                    document.querySelector("#num_tentativi").innerHTML = "Hai ancora " + tentativi + " rimanenti"
+                    document.querySelector(".numBold").innerHTML = tentativi
 
                 } else if (number < casualNumber) {
                     console.log("Il numero da te inserito è troppo piccolo")
                     tentativi = tentativi - 1
                     document.querySelector("#tipoNumero").innerHTML = "Il numero è troppo piccolo!"
-                    document.querySelector("#num_tentativi").innerHTML = "Hai ancora " + tentativi + " rimanenti"
+                    document.querySelector(".numBold").innerHTML = tentativi
                 }
             }
         })

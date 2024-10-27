@@ -2,12 +2,17 @@
 
 body {
     background-color: #CCFFC5;
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
+    font-family: Inter;
+    font-size: 16px;
 }
 
 .title {
+    display: flex;
+    justify-content: center;
+    align-items: center ;
     font-family: Inter;
     font-weight: bold;
     font-size: 50px;
@@ -18,11 +23,22 @@ body {
     font-family: Inter;
     font-size: 16px;
     list-style-position: inside;
+    list-style-type: none;
+    display: grid;
+    justify-content: center;
+    align-items: center;
 }
 
-#formInputUser {
-    display: flex;
-    flex-direction: column;
+.formInputUser {
+    display: grid;
+    justify-content: center;
+    align-items: center;;
+}
+
+.tentativi {
+    margin-top: 18px;
+    display: grid;
+    justify-content: center;
     align-items: center;
 }
 
@@ -45,5 +61,5 @@ body {
 #paragraph {
     font-family: Inter;
     font-size: 16px;
-    margin: 0px;
+    margin-top: 80px;
 }
