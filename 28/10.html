@@ -1,0 +1,25 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let restart = document.querySelector("#restart")
+
+        restart.addEventListener("click", function (event) {
+            caualNumber = generateRandomInteger(min, max)
+            tentativi = 5
+
+            document.body.classList.remove("green")
+            document.body.classList.remove("yellow")
+            document.body.classList.remove("red")
+            document.body.classList.add("green")
+        })
+    </script>
+</body>
+</html>

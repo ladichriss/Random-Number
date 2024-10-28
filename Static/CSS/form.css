@@ -26,6 +26,7 @@
     border: none;
     background-color: #3AE3A8;
     font-weight: bold;
+    border-radius: 5px;
 }
 
 #paragraph {

@@ -38,8 +38,8 @@
         </div>
 
         <div class="tentativi">
-            <div id="tipoNumero"> </div>
-            <div id="num_tentativi">Hai ancora <span class="numBold">5</span> tentativi</div>
+            <div id="tipoNumero">Non hai ancora inserito nessun numero!</div>
+            <div id="num_tentativi"></div>
         </div>
 </div>
 
@@ -71,7 +71,7 @@
             
             if (tentativi === 0) {
                 console.log("Hai terminato i tentativi. Riprova!")
-                document.querySelector(".numBold").innerHTML = tentativi
+                document.querySelector("#num_tentativi").innerHTML = "Hai ancora <b>" + tentativi + "</b> rimanenti"
                 button.classList.add("disabled")
                 button.disabled = true;
 
@@ -83,18 +83,18 @@
                     // eseguo la verifica del numero
                     if (number > casualNumber) {
                     console.log("Il numero da te inserito è troppo grande")
-                    document.querySelector(".numBold").innerHTML = tentativi
+                    document.querySelector("#num_tentativi").innerHTML = "Hai ancora <b>" + tentativi + "</b> rimanenti"
                     document.querySelector("#tipoNumero").innerHTML = "Il numero è troppo grande!"
                     } else if (number === casualNumber) {
                         console.log("Hai indovinato il numero! COMPLIMENTI!")
                         tentativi = 0
                         document.querySelector("#tipoNumero").innerHTML = "Hai indovinato il numero! COMPLIMENTI!"
-                        document.querySelector(".numBold").innerHTML = tentativi
+                        document.querySelector("#num_tentativi").innerHTML = "Hai ancora <b>" + tentativi + "</b> rimanenti"
 
                     } else if (number < casualNumber) {
                         console.log("Il numero da te inserito è troppo piccolo")
                         document.querySelector("#tipoNumero").innerHTML = "Il numero è troppo piccolo!"
-                        document.querySelector(".numBold").innerHTML = tentativi
+                        document.querySelector("#num_tentativi").innerHTML = "Hai ancora <b>" + tentativi + "</b> rimanenti"
                     }
 
                 } else if (tentativi === 3) {
@@ -105,18 +105,18 @@
                     // eseguo la verifica del numero
                     if (number > casualNumber) {
                     console.log("Il numero da te inserito è troppo grande")
-                    document.querySelector(".numBold").innerHTML = tentativi
+                    document.querySelector("#num_tentativi").innerHTML = "<b>" + tentativi + "</b>"
                     document.querySelector("#tipoNumero").innerHTML = "Il numero è troppo grande!"
                     } else if (number === casualNumber) {
                         console.log("Hai indovinato il numero! COMPLIMENTI!")
                         tentativi = 0
                         document.querySelector("#tipoNumero").innerHTML = "Hai indovinato il numero! COMPLIMENTI!"
-                        document.querySelector(".numBold").innerHTML = tentativi
+                        document.querySelector("#num_tentativi").innerHTML = "<b>" + tentativi + "</b>"
 
                     } else if (number < casualNumber) {
                         console.log("Il numero da te inserito è troppo piccolo")
                         document.querySelector("#tipoNumero").innerHTML = "Il numero è troppo piccolo!"
-                        document.querySelector(".numBold").innerHTML = tentativi
+                        document.querySelector("#num_tentativi").innerHTML = "Hai ancora <b>" + tentativi + "</b> rimanenti"
                     }
                 
                 } else if (tentativi === 2) {
@@ -127,18 +127,18 @@
                     // eseguo la verifica del numero
                     if (number > casualNumber) {
                     console.log("Il numero da te inserito è troppo grande")
-                    document.querySelector(".numBold").innerHTML = tentativi
+                    document.querySelector("#num_tentativi").innerHTML = "Hai ancora <b>" + tentativi + "</b> rimanenti"
                     document.querySelector("#tipoNumero").innerHTML = "Il numero è troppo grande!"
                     } else if (number === casualNumber) {
                         console.log("Hai indovinato il numero! COMPLIMENTI!")
                         tentativi = 0
                         document.querySelector("#tipoNumero").innerHTML = "Hai indovinato il numero! COMPLIMENTI!"
-                        document.querySelector(".numBold").innerHTML = tentativi
+                        document.querySelector("#num_tentativi").innerHTML = "Hai ancora <b>" + tentativi + "</b> rimanenti"
 
                     } else if (number < casualNumber) {
                         console.log("Il numero da te inserito è troppo piccolo")
                         document.querySelector("#tipoNumero").innerHTML = "Il numero è troppo piccolo!"
-                        document.querySelector(".numBold").innerHTML = tentativi
+                        document.querySelector("#num_tentativi").innerHTML = "Hai ancora <b>" + tentativi + "</b> rimanenti"
                     }
                 } else if (tentativi === 1) {
                     //cambio colore
@@ -148,18 +148,18 @@
                     // eseguo la verifica del numero
                     if (number > casualNumber) {
                     console.log("Il numero da te inserito è troppo grande")
-                    document.querySelector(".numBold").innerHTML = tentativi
+                    document.querySelector("#num_tentativi").innerHTML = "Hai ancora <b>" + tentativi + "</b> rimanenti"
                     document.querySelector("#tipoNumero").innerHTML = "Il numero è troppo grande!"
                     } else if (number === casualNumber) {
                         console.log("Hai indovinato il numero! COMPLIMENTI!")
                         tentativi = 0
                         document.querySelector("#tipoNumero").innerHTML = "Hai indovinato il numero! COMPLIMENTI!"
-                        document.querySelector(".numBold").innerHTML = tentativi
+                        document.querySelector("#num_tentativi").innerHTML = "Hai ancora <b>" + tentativi + "</b> rimanenti"
 
                     } else if (number < casualNumber) {
                         console.log("Il numero da te inserito è troppo piccolo")
                         document.querySelector("#tipoNumero").innerHTML = "Il numero è troppo piccolo!"
-                        document.querySelector(".numBold").innerHTML = tentativi
+                        document.querySelector("#num_tentativi").innerHTML = "Hai ancora <b>" + tentativi + "</b> rimanenti"
                     }
                 }
             } 
